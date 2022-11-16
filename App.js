@@ -16,6 +16,14 @@ function HomeScreen() {
   );
 }
 
+import OnerView from './assets/screens/OunerView/OnerView'
+import  Chat from './assets/screens/Chat'
+import Home from "./assets/screens/Home";
+import Blog from "./assets/screens/Blog";
+import Login  from "./assets/screens/Login"
+
+
+
 export default function App() {
   const Stack = createNativeStackNavigator();
 
@@ -81,9 +89,23 @@ export default function App() {
           }}
         />
 
+    
+   
+
+    <Stack.Screen name="owner" component={OnerView} />
+    <Stack.Screen name="chat" component={Chat} />
+    <Stack.Screen name="home" component={Home} />
+    <Stack.Screen name="blog" component={Blog} />
+    <Stack.Screen name="login" component={Login} />
+
+    
+    
+    
+   
       </Stack.Navigator>
       
     </NavigationContainer>
+  
   );
 }
 

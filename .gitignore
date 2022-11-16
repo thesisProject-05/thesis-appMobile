@@ -7,8 +7,12 @@ npm-debug.*
 *.p12
 *.key
 *.mobileprovision
-*.orig.*
+.orig.
 web-build/
 
 # macOS
 .DS_Store
+# Node
+node_modules
+npm-debug.log
+yarn-error.log
