@@ -1,14 +1,25 @@
+<<<<<<< HEAD
 
+=======
+>>>>>>> 04f235d5687a791a52e9caecec1f9c7d013376bc
 node_modules/
 .expo/
 dist/
 npm-debug.*
 *.jks
+<<<<<<< HEAD
 *.p8  
 *.p12
 *.key
 *.mobileprovision
 *.orig.*
+=======
+*.p8
+*.p12
+*.key
+*.mobileprovision
+.orig.
+>>>>>>> 04f235d5687a791a52e9caecec1f9c7d013376bc
 web-build/
 
 # macOS
@@ -16,4 +27,8 @@ web-build/
 # Node
 node_modules
 npm-debug.log
+<<<<<<< HEAD
 yarn-error.log
+=======
+yarn-error.log
+>>>>>>> 04f235d5687a791a52e9caecec1f9c7d013376bc

@@ -10,7 +10,7 @@ export default function OwnerView({navigation}) {
     
    <TouchableOpacity  onPress = {()=>{navigation.navigate("home")}}>
    
-   <Image style={styles.logo} source={require("../../../assets/tofla.jpg")} autoPlay/>
+   <Image style={styles.logo} source={require("../../assets/tofla.jpg")} autoPlay/>
    
    <ModalDropdown style={[styles.logOut]} defaultValue={"Option"}  options={['HouseOwner','logOut',"ActSet"]}>
   
