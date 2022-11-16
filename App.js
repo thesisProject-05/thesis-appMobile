@@ -48,8 +48,8 @@ export default function App() {
           component={OwnerRegistration}
         ></Stack.Screen>
 
-    <NavigationContainer style={styles.container}>
-    <Stack.Navigator>
+    {/* <NavigationContainer style={styles.container}> */}
+    {/* <Stack.Navigator> */} 
    
 
     <Stack.Screen name="owner" component={OnerView} />

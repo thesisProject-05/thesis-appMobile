@@ -1,11 +1,10 @@
-<<<<<<< HEAD
 
 node_modules/
 .expo/
 dist/
 npm-debug.*
 *.jks
-*.p8
+*.p8  
 *.p12
 *.key
 *.mobileprovision
@@ -18,9 +17,3 @@ web-build/
 node_modules
 npm-debug.log
 yarn-error.log
-=======
-node_modules
-node_modules
-node_modules
-node_modules
->>>>>>> 3cd6c3f2d8891a2d166642883330dba49e81522e
