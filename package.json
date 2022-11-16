@@ -10,6 +10,10 @@
   },
   "dependencies": {
     "@expo/vector-icons": "^13.0.0",
+<<<<<<< HEAD
+=======
+    "@react-native-picker/picker": "^2.4.8",
+>>>>>>> 3cd6c3f2d8891a2d166642883330dba49e81522e
     "@react-navigation/native": "^6.0.13",
     "@react-navigation/native-stack": "^6.9.1",
     "axios": "^1.1.3",
@@ -20,7 +24,12 @@
     "lottie-react-native": "^5.1.4",
     "react": "18.1.0",
     "react-native": "0.70.5",
+<<<<<<< HEAD
     "react-native-modal-dropdown": "^1.0.2"
+=======
+    "react-native-modal-dropdown": "^1.0.2",
+    "react-native-select-dropdown": "^3.0.3"
+>>>>>>> 3cd6c3f2d8891a2d166642883330dba49e81522e
   },
   "devDependencies": {
     "@babel/core": "^7.12.9"
