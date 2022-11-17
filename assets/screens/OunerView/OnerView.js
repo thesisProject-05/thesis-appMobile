@@ -11,7 +11,7 @@ export default function OwnerView({navigation}) {
    <TouchableOpacity  onPress = {()=>{navigation.navigate("home")}}>
    
    <Image style={styles.logo} source={require("../../../assets/tofla.jpg")} autoPlay/>
-   
+   </TouchableOpacity>
    <ModalDropdown style={[styles.logOut]} defaultValue={"Option"}  options={['HouseOwner','logOut',"ActSet"]}>
   
    
@@ -21,7 +21,7 @@ export default function OwnerView({navigation}) {
 
    <Text  style={[styles.owner]}> OwnerView</Text>
    
-   </TouchableOpacity>
+   
     
 
   <View  style={styles.row}>
@@ -66,7 +66,7 @@ const styles = StyleSheet.create({
         height: 40,
         borderRadius: 40,
         marginTop:10,
-        marginLeft:"80%"
+        marginLeft:"88%"
       },
     owner: {
          color: 'blue',
@@ -77,13 +77,14 @@ const styles = StyleSheet.create({
          
         
     },
+    
 
     logOut:{
         color: '#00BFFF',
         width: 80,
          height: 100,
         marginTop:10,
-        marginLeft:"80%", 
+        marginLeft:"88%", 
 
     }
       
