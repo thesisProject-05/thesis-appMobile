@@ -2,13 +2,16 @@ import * as React from "react";
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 
+
 // import OwnerRegistration from "./screens/homeOwner/auth/OwnerSignupForm";
 // import OwnerLoginForm from "./screens/homeOwner/auth/OwnerLoginForm";
+
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet,Pressable, Text,Modal, View,Button,LogoTitle } from 'react-native';
 
 
 import Navigation from "./screens/Navigation";
+
 
 function HomeScreen() {
   return (
@@ -17,6 +20,7 @@ function HomeScreen() {
     </View>
   );
 }
+
 import OnerView from './screens/OunerView/OnerView'
 import  Chat from './screens/Chat'
 import Home from "./screens/Home";
@@ -29,6 +33,7 @@ export default function App() {
   const Stack = createNativeStackNavigator();
 
   return (
+
      <Navigation/>
     
    
@@ -93,6 +98,7 @@ export default function App() {
     //           />
     //         )
     //       }}
+
           
     //     />
         
@@ -141,7 +147,9 @@ export default function App() {
     
    
 
+
     //   </Stack.Navigator>
+
       
     // </NavigationContainer>
   

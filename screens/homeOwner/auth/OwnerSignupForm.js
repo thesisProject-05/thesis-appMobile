@@ -38,9 +38,11 @@ export default function OwnerRegistration({ navigation }) {
     
     const register = () => {
         
+
        axios.post(`http://192.168.11.36:3001/owner/register`, newOwner)
      .then((response) => {
       console.log("response")
+
          navigation.navigate("OwnerLoginForm");
        console.log(response.data, " welcome");
       })
@@ -130,7 +132,9 @@ export default function OwnerRegistration({ navigation }) {
         >
           <Text style={styles.forgot_button}>Signup here</Text>
         </TouchableOpacity>
+
         <TouchableOpacity style={styles.loginBtn} onPress={()=>navigation.navigate("OwnerLoginForm")}>
+
           <Text style={styles.textButton}>Register</Text>
         </TouchableOpacity>
       </View>
