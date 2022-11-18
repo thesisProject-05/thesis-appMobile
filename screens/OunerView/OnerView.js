@@ -18,10 +18,10 @@ export default function OwnerView({navigation}) {
    
    
    </ModalDropdown>
-
+</TouchableOpacity>
    <Text  style={[styles.owner]}> OwnerView</Text>
    
-   </TouchableOpacity>
+   
     
 
   <View  style={styles.row}>
