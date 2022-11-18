@@ -14,7 +14,9 @@ import axios from "axios";
 import LottieView from "lottie-react-native";
 
 // home owner's login screen :
-export default function OwnerLoginForm({ navigation }) {
+
+const OwnerLoginForm = ({ navigation }) => {
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const { passwordVisibility, rightIcon, handlePasswordVisibility } =
@@ -36,7 +38,9 @@ export default function OwnerLoginForm({ navigation }) {
         }
       );
       console.log(sendingInfo);
-      navigation.navigate("");
+
+      navigation.navigate("owner");
+
     } catch (err) {
       console.log(err);
     }
@@ -46,7 +50,6 @@ export default function OwnerLoginForm({ navigation }) {
   return (
     <ScrollView style={styles.container1}>
 
-     
       <View style={styles.container}>
         <Text style={styles.titleofApp}>Roost It</Text>
         <View style={styles.inputView}>
@@ -89,7 +92,9 @@ export default function OwnerLoginForm({ navigation }) {
         <TouchableOpacity
           style={styles.loginBtn}
           //button who activate the login function
-          onPress={login}
+
+          onPress={()=>navigation.navigate('owner')}
+
         >
           <Text style={styles.loginText}>Login</Text>
         </TouchableOpacity>
@@ -97,6 +102,10 @@ export default function OwnerLoginForm({ navigation }) {
     </ScrollView>
   );
 }
+
+export default OwnerLoginForm;
+
+
 
 //style for the login screen
 const styles = StyleSheet.create({
