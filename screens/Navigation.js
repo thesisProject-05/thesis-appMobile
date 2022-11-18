@@ -53,6 +53,7 @@ export default function navigation({ }) {
                 <Stack.Screen
                     name="SecondPage"
                     component={SecondPage}
+
                     // options={{
                     //     title: 'Second Page', //Set Header Title
                     //     headerStyle: {
@@ -63,6 +64,7 @@ export default function navigation({ }) {
                     //         fontWeight: 'bold', //Set Header text style
                     //     },
                     // }}
+
                 />
                 <Stack.Screen
                     name="ThirdPage"
