@@ -53,16 +53,18 @@ export default function navigation({ }) {
                 <Stack.Screen
                     name="SecondPage"
                     component={SecondPage}
-                    options={{
-                        title: 'Second Page', //Set Header Title
-                        headerStyle: {
-                            backgroundColor: '#f4511e', //Set Header color
-                        },
-                        headerTintColor: '#fff', //Set Header text color
-                        headerTitleStyle: {
-                            fontWeight: 'bold', //Set Header text style
-                        },
-                    }}
+
+                    // options={{
+                    //     title: 'Second Page', //Set Header Title
+                    //     headerStyle: {
+                    //         backgroundColor: '#f4511e', //Set Header color
+                    //     },
+                    //     headerTintColor: '#fff', //Set Header text color
+                    //     headerTitleStyle: {
+                    //         fontWeight: 'bold', //Set Header text style
+                    //     },
+                    // }}
+
                 />
                 <Stack.Screen
                     name="ThirdPage"
