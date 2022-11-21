@@ -10,6 +10,8 @@ import {
 } from "react-native";
 import React, { useState, useEffect } from "react";
 import { MaterialCommunityIcons } from "@expo/vector-icons";
+import link from "../../../Adress";
+
 import axios from "axios";
 import LottieView from "lottie-react-native";
 import { useTogglePasswordVisibility } from "../../../hooks/TogglePassword";
@@ -19,9 +21,11 @@ export default function OwnerRegistration({ navigation }) {
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const [dateOfBirth, setDateOfBirth] = useState("");
-  const [phoneNumber, setPhoneNumber] = useState();
+  const [phoneNumber, setPhoneNumber] = useState("");
   const [city, setCity] = useState("");
-  const [cin, setCin] = useState();
+  const [cin, setCin] = useState("");
+  const [photo,setPhoto] = useState("");
+  const [data, setData] = useState([]);
   const { passwordVisibility, rightIcon, handlePasswordVisibility } =
     useTogglePasswordVisibility();
 
@@ -34,18 +38,21 @@ export default function OwnerRegistration({ navigation }) {
       phoneNumber: phoneNumber,
       city: city,
       cin: cin,
+      photo: photo,
     };
     
-    const register = () => {
+    const register =() => {
         
-       axios.post(`http://192.168.11.218:3001/owner/register`, newOwner)
+      axios.post(`http://192.168.11.218:3001/owner/register`, newOwner)
      .then((response) => {
-         navigation.navigate("OwnerLoginForm");
-       console.log(response.data, " welcome");
+
+         navigation.navigate("HomeOwnerVerificationScreen");
+           setData(response.data)
+           console.log(data,"welcome");
       })
        .catch((error) => {
 
-        console.log(error, "<=====3leeh>");
+        console.log(error.message);
       })
   };
 
@@ -121,10 +128,18 @@ export default function OwnerRegistration({ navigation }) {
             onChangeText={(cin) => setCin(cin)}
           ></TextInput>
         </View>
+        <View style={styles.inputView}>
+          <TextInput
+            styles={styles.TextInput}
+            placeholder="upload ur photo"
+            placeholderTextColor="black"
+            onChangeText={(photo) => setPhoto(photo)}
+          ></TextInput>
+        </View>
         <TouchableOpacity
-          //navigate to sign up screen for Doctor
+          //navigate to sign up screen for homeOwner
           onPress={() => {
-            navigation.navigate("OwnerRegistration", { id: id });
+            navigation.navigate("OwnerRegistration");
           }}
         >
           <Text style={styles.forgot_button}>Signup here</Text>
@@ -133,6 +148,7 @@ export default function OwnerRegistration({ navigation }) {
           <Text style={styles.textButton}>Register</Text>
         </TouchableOpacity>
       </View>
+
     </ScrollView>
   );
 }

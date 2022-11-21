@@ -36,7 +36,7 @@ export default function OwnerLoginForm({ navigation }) {
         }
       );
       console.log(sendingInfo);
-      navigation.navigate("");
+      navigation.navigate("/");
     } catch (err) {
       console.log(err);
     }

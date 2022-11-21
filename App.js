@@ -3,6 +3,7 @@ import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import OwnerRegistration from "./screens/homeOwner/auth/OwnerSignupForm";
 import OwnerLoginForm from "./screens/homeOwner/auth/OwnerLoginForm";
+import HomeOwnerVerificationScreen from "./screens/homeOwner/auth/HomeOwnerVerificationScreen";
 import { StatusBar } from 'expo-status-bar';
 import { StyleSheet,Pressable, Text,Modal, View,Button,LogoTitle } from 'react-native';
 
@@ -10,11 +11,12 @@ import FirstPage from "./screens/HomeScreen";
 import SecondPage from "./screens/students/ItntoPage";
 import ThirdPage from "./screens/students/ThirdPage";
 
-import OnerView from './screens/OunerView/OnerView'
-import  Chat from './screens/Chat'
-import Home from "./screens/Home";
-import Blog from "./screens/Blog";
-import Login  from "./screens/Login";
+// import OnerView from './screens/OunerView/OnerView'
+// import  Chat from './screens/Chat'
+// import Home from "./screens/Home";
+// import Blog from "./screens/Blog";
+// import Login  from "./screens/Login";
+
 
 
 
@@ -39,6 +41,7 @@ export default function App() {
           }}
           component={OwnerLoginForm}
         ></Stack.Screen>
+       
         <Stack.Screen
           name="OwnerRegistration"
           options={{
@@ -53,6 +56,21 @@ export default function App() {
             },
           }}
           component={OwnerRegistration}
+        ></Stack.Screen>
+         <Stack.Screen
+          name="HomeOwnerVerificationScreen"
+          options={{
+            title: "Verification",
+            headerStyle: {
+              backgroundColor: "#077871",
+            },
+            headerTintColor: "#fff",
+            headerTitleAlign: "center",
+            headerTitleStyle: {
+              fontWeight: "bold",
+            },
+          }}
+          component={HomeOwnerVerificationScreen}
         ></Stack.Screen>
 
     {/* <NavigationContainer style={styles.container}> */}
@@ -119,11 +137,7 @@ export default function App() {
     
    
 
-    <Stack.Screen name="owner" component={OnerView} />
-    <Stack.Screen name="chat" component={Chat} />
-    <Stack.Screen name="home" component={Home} />
-    <Stack.Screen name="blog" component={Blog} />
-    <Stack.Screen name="login" component={Login} />
+
 
     
     
